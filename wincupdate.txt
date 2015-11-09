@@ -1,0 +1,26 @@
+programming w/zero
+plug into EDBG
+(if using sclconnect FTDI to SCL (yellow RX) & SDA (orange TX))
+
+WINC SPI -> hardware SPI
+WINC RST -> D4 (D2 on arduino.org zero)
+WINC EN  -> D2 (D4 on arduino.org zero)
+WINC IRQ -> D7
+WINC CS  -> D8
+
+run:
+cd C:\Users\ladyada\Documents\Atmel Studio\7.0\WINC1500_FIRMWARE_UPDATE_PROJECT1\WINC1500_FIRMWARE_UPDATE_PROJECT1\src
+zero_firmware_update.bat
+
+========================
+
+programming w/feather m0
+
+connect stlink to rst/swdio/swclk/gnd
+
+> adalink -v atsamd21g18 -p stlink -w -h Tools\serial_bridge\featherm0_serial_bridge.hex
+
+connect FTDI to SCL (yellow RX) & SDA (orange TX)
+> download_all.bat UART
+
+when done
