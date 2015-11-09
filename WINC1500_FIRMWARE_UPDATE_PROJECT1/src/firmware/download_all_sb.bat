@@ -19,7 +19,7 @@ if NOT "%IMAGE_FILE_FULL_PATH:~210,1%"=="" (
 	echo [ERROR] File path is too long. Please move firmware update tool at the root of your hard drive and try again.
 	echo.
 	pause
-	exit
+	exit /b
 )
 
 :: Try to locate atprogram tool from Atmel Studio.
@@ -49,7 +49,7 @@ echo     ##                  ##       ##     ##  ####  ########               ##
 echo     ##                                                                   ##
 echo     #######################################################################
 pause
-exit
+exit /b
 )
 
 :: Write fuse bit to boot from flash for SAM4/G.
@@ -77,7 +77,7 @@ echo     ##                  ##       ##     ##  ####  ########               ##
 echo     ##                                                                   ##
 echo     #######################################################################
 pause
-exit
+exit /b
 )
 
 echo Please wait...
@@ -97,7 +97,7 @@ echo     ##                  ##       ##     ##  ####  ########               ##
 echo     ##                                                                   ##
 echo     #######################################################################
 pause
-exit
+exit /b
 )
 
 echo OK.
