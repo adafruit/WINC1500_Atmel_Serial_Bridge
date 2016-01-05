@@ -19,19 +19,24 @@ if NOT "%IMAGE_FILE_FULL_PATH:~210,1%"=="" (
 	echo [ERROR] File path is too long. Please move firmware update tool at the root of your hard drive and try again.
 	echo.
 	pause
-	exit /b
+	exit
 )
 
 :: Try to locate atprogram tool from Atmel Studio.
 set atprogPath=
-IF EXIST "%varPath%\Atmel\Atmel Studio 6.2\atbackend\atprogram.exe" (
-	set "atprogPath=%varPath%\Atmel\Atmel Studio 6.2\atbackend\atprogram.exe"
+IF EXIST "%varPath%\Atmel\Studio\7.0\atbackend\atprogram.exe" (
+	set "atprogPath=%varPath%\Atmel\Studio\7.0\atbackend\atprogram.exe"
 ) ELSE (
-	echo.
-	echo [ERROR] Cannot open atprogram tool at default location:
-	echo "%varPath%\Atmel\Atmel Studio 6.2\atbackend\atprogram.exe"
-	echo.
-	set /p atprogPath=Please provide full path to atprogram.exe to continue: 
+	IF EXIST "%varPath%\Atmel\Atmel Studio 6.2\atbackend\atprogram.exe" (
+		set "atprogPath=%varPath%\Atmel\Atmel Studio 6.2\atbackend\atprogram.exe"
+	) ELSE (
+		echo.
+		echo [ERROR] Cannot find atprogram tool at default locations:
+		echo "%varPath%\Atmel\Studio\7.0\atbackend\atprogram.exe"
+		echo "%varPath%\Atmel\Atmel Studio 6.2\atbackend\atprogram.exe"
+		echo.
+		set /p atprogPath=Please provide full path to atprogram.exe to continue: 
+	)
 )
 
 :: Perform chip erase.
@@ -49,7 +54,7 @@ echo     ##                  ##       ##     ##  ####  ########               ##
 echo     ##                                                                   ##
 echo     #######################################################################
 pause
-exit /b
+exit
 )
 
 :: Write fuse bit to boot from flash for SAM4/G.
@@ -77,7 +82,7 @@ echo     ##                  ##       ##     ##  ####  ########               ##
 echo     ##                                                                   ##
 echo     #######################################################################
 pause
-exit /b
+exit
 )
 
 echo Please wait...
@@ -97,7 +102,7 @@ echo     ##                  ##       ##     ##  ####  ########               ##
 echo     ##                                                                   ##
 echo     #######################################################################
 pause
-exit /b
+exit
 )
 
 echo OK.

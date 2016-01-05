@@ -10,6 +10,7 @@ WINC CS  -> D8
 
 run:
 cd C:\Users\ladyada\Documents\Atmel Studio\7.0\WINC1500_FIRMWARE_UPDATE_PROJECT1\WINC1500_FIRMWARE_UPDATE_PROJECT1\src
+cd "C:\Users\ladyada\Dropbox (Personal)\Atmel\AtmelStudio>\7.0\WINC1500_FIRMWARE_UPDATE_PROJECT1\WINC1500_FIRMWARE_UPDATE_PROJECT1\src"
 zero_firmware_update.bat
 
 ========================
