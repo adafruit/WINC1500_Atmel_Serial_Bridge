@@ -1,4 +1,4 @@
-@ECHO on
+@ECHO off
 ::download_all.bat [Mode] (COM)
 ::  Mode: any of {UART, I2C, OTA}.
 ::  COM: COM port number of target device (optional).
