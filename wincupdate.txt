@@ -19,6 +19,8 @@ programming w/feather m0
 
 connect stlink to rst/swdio/swclk/gnd
 
+cd "C:\Users\ladyada\Dropbox (Personal)\Atmel\AtmelStudio>\7.0\WINC1500_FIRMWARE_UPDATE_PROJECT1\WINC1500_FIRMWARE_UPDATE_PROJECT1\src\firmware"
+
 > adalink -v atsamd21g18 -p stlink -w -h Tools\serial_bridge\featherm0_serial_bridge.hex
 
 connect FTDI to SCL (yellow RX) & SDA (orange TX)
