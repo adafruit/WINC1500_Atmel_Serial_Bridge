@@ -1,4 +1,4 @@
-@echo On
+@echo Off
 
 set TOOL=%1
 set MCU=%2
