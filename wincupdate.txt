@@ -1,6 +1,6 @@
 programming w/zero
 plug into EDBG
-(if using sclconnect FTDI to SCL (yellow RX) & SDA (orange TX))
+(if using sclconnect FTDI to SDA (yellow RX) & SCL (orange TX))
 
 WINC SPI -> hardware SPI
 WINC RST -> D4 (D2 on arduino.org zero)
@@ -23,7 +23,7 @@ cd "C:\Users\ladyada\Dropbox (Personal)\Atmel\AtmelStudio>\7.0\WINC1500_FIRMWARE
 
 > adalink -v atsamd21g18 -p stlink -w -h Tools\serial_bridge\featherm0_serial_bridge.hex
 
-connect FTDI to SCL (yellow RX) & SDA (orange TX)
+connect FTDI to SDA (yellow RX) & SCL (orange TX)
 > download_all.bat UART
 
 when done
